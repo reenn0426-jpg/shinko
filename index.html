@@ -362,6 +362,10 @@ footer small{line-height:2}
 .shop-card.has-photo .ic{display:none}
 .shop-card .card-ph{margin:0 0 16px}
 .shop-card .card-ph img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;border:1px solid var(--accent-line);border-radius:var(--radius)}
+
+/* 日本語の改行位置を文節単位に */
+.nb{display:inline-block}
+.hero p.lede,.about-text .lead,.about-text p,.sec-head p,.curry-lead,.new-card p,.new-list li em,.shop-card p,.marche-note,.curry-note{word-break:auto-phrase}
 </style></head><body>
 
 <div class="awning"></div>
@@ -394,7 +398,7 @@ footer small{line-height:2}
       <span class="ribbon">毎週火曜日開催</span>
       <h1>火曜日は<br><span class="hl">カレー曜日</span></h1>
       <div class="brandline">Keihoku, Kuroda</div>
-      <p class="lede">京都市内から車で約1時間。京北・黒田、自然ゆたかな森の中。<br>古民家を改装した、ジビエカレーのお店。火曜日だけ、扉をひらきます。</p>
+      <p class="lede"><span class="nb">京都市内から</span><span class="nb">車で約1時間。</span><span class="nb">京北・黒田、</span><span class="nb">自然ゆたかな</span><span class="nb">森の中。</span><br><span class="nb">古民家を改装した、</span><span class="nb">ジビエカレーのお店。</span><span class="nb">火曜日だけ、</span><span class="nb">扉をひらきます。</span></p>
       <div class="hero-cta">
         <a href="#curry" class="btn btn-gold">メニューを見る</a>
         <a href="#marche" class="btn btn-line">マルシェ・教室</a>
