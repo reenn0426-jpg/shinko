@@ -270,7 +270,7 @@ figure.ph figcaption{font-size:.76rem;letter-spacing:.08em;color:var(--ink-soft)
 
 /* ================= Instagram セクション ================= */
 .ig-frame{max-width:840px;margin:0 auto;padding:34px 30px;border:1px solid var(--accent-line);background:var(--surface)}
-.ig-frame behold-widget{--behold-row-gap:14px;--behold-column-gap:14px;--behold-border-radius:2px;display:block}
+.ig-frame behold-widget{--behold-row-gap:14px;--behold-column-gap:14px;--behold-border-radius:2px;display:block;min-height:200px}
 .ig-placeholder{text-align:center;padding:26px 10px}
 .ig-placeholder .stag{color:var(--accent)}
 .ig-placeholder .stag svg{width:52px;height:52px}
@@ -715,12 +715,10 @@ footer small{line-height:2}
 
     <div class="ig-frame reveal">
       <!-- ▼▼▼ ここから【貼りかえ範囲】▼▼▼ -->
-      <div class="ig-placeholder">
-        <span class="stag" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 88c-7 0-12-6-12-14 0-6 3-10 3-16 0-4-3-6-3-6"/><path d="M50 88c7 0 12-6 12-14 0-6-3-10-3-16 0-4 3-6 3-6"/><path d="M38 52c-4-2-7-1-10 1m10-1c-3-4-3-8-2-12"/><path d="M62 52c4-2 7-1 10 1m-10-1c3-4 3-8 2-12"/><path d="M41 40C36 30 30 28 24 22m6 12c-4-1-7 0-10 2m14-2c-1-4-4-6-7-8"/><path d="M59 40C64 30 70 28 76 22m-6 12c4-1 7 0 10 2m-14-2c1-4 4-6 7-8"/><circle cx="44" cy="60" r="1.6" fill="currentColor" stroke="none"/><circle cx="56" cy="60" r="1.6" fill="currentColor" stroke="none"/><path d="M47 74c1 1.5 5 1.5 6 0"/></svg></span>
-        <div class="div"></div>
-        <p>その日のカレー、マルシェに並ぶ品、<br>森のうつりかわり。<br>ふだんの様子をInstagramでお届けしています。</p>
-        <div class="hint">suivez-nous</div>
-      </div>
+      <!-- Behold.so Instagramウィジェット（@tuesdaycurry2026）
+           無料プラン：最新6件・1日1回更新。
+           フィードを作り直した場合は feed-id を差し替えてください。 -->
+      <behold-widget feed-id="wR5XlCWKeynnB8KfbJP2"></behold-widget>
       <!-- ▲▲▲ ここまで【貼りかえ範囲】▲▲▲ -->
     </div>
 
@@ -874,6 +872,15 @@ footer small{line-height:2}
     if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
     var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
     els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+
+<!-- Behold.so ウィジェット読み込み用スクリプト（Instagramセクション用） -->
+<script>
+  (() => {
+    if(window.__bhldScript)return;window.__bhldScript=true;
+    const d=document,s=d.createElement("script");s.type="module";
+    s.src="https://w.behold.so/widget.js";setTimeout(()=>{d.head.append(s);},0);
   })();
 </script>
 </body></html>
